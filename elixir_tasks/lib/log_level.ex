@@ -1,18 +1,24 @@
 defmodule LogLevel do
-  @moduledoc """
-  Documentation for `ElixirTasks`.
-  """
+  def to_label(level, legacy?) do
+    cond do
+      level == 0 and !legacy? -> :trace
+      level == 1 -> :debug
+      level == 2 -> :info
+      level == 3 -> :warning
+      level == 4 -> :error
+      level == 5 and !legacy? -> :fatal
+      true -> :unknown
+    end
+  end
 
-  @doc """
-  Hello world.
-
-  ## Examples
-
-      iex> ElixirTasks.hello()
-      :world
-
-  """
-  def hello do
-    :world
+  def alert_recipient(level, legacy?) do
+    log_label = to_label(level, legacy?)
+    cond do
+      log_label in [:error, :fatal] -> :ops
+      #log_label == :fatal -> :ops
+      log_label == :unknown and legacy? -> :dev1
+      log_label == :unknown -> :dev2
+      true -> false
+    end
   end
 end
