@@ -8,7 +8,7 @@ defmodule LanguageList do
   end
 
   def remove(list) do
-    list -- [hd(list)]
+    tl(list)
   end
 
   def first(list) do
