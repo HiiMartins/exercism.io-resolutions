@@ -1,21 +1,5 @@
-# ElixirTasks
+# Prática de Elixir no site exercism.org
 
-**TODO: Add description**
+Neste diretório serão compartilhados as minhas resoluções dos desafios de código de **Elixir** da plataforma **exercism**. Afim de compartilhar minha evolução no aprendedizado da linguagem. Se quer aprender **Elixir** [clique no link e comece a praticar](https://exercism.org/tracks/elixir). 
 
-## Installation
-
-If [available in Hex](https://hex.pm/docs/publish), the package can be installed
-by adding `elixir_tasks` to your list of dependencies in `mix.exs`:
-
-```elixir
-def deps do
-  [
-    {:elixir_tasks, "~> 0.1.0"}
-  ]
-end
-```
-
-Documentation can be generated with [ExDoc](https://github.com/elixir-lang/ex_doc)
-and published on [HexDocs](https://hexdocs.pm). Once published, the docs can
-be found at <https://hexdocs.pm/elixir_tasks>.
 
